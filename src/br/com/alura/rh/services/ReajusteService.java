@@ -19,7 +19,7 @@ public class ReajusteService {
             validacao.validar(funcionario, aumento);
         });
         
-        BigDecimal salario = funcionario.getSalario();
+        BigDecimal salario = funcionario.getDadosPessoais().getSalario();
 
         BigDecimal salarioReajustado = salario.add(aumento);
         funcionario.atualizarSalario(salarioReajustado);
